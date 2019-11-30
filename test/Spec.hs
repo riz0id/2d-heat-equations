@@ -23,7 +23,7 @@ main = do
   let width  = 512
       height = 512
       
-  hField <- importBMP "/home/syzygy/Documents/simulation/heat/2d/HeatSolver/samples/lena512.bmp" width height 100
+  hField <- importBMP "/home/syzygy/Documents/simulation/heat/2d/HeatSolver/samples/circle.bmp" width height 100
 
   qField <- importBMP "/home/syzygy/Documents/simulation/heat/2d/HeatSolver/samples/heteroMat.bmp" width height 3
    
@@ -43,7 +43,7 @@ main = do
   playIO
     (InWindow "heat test" (width+200, height+50) (10, 10))
     white
-    140
+    240
     hField
     (render)
     (\_ -> return)
